@@ -112,6 +112,12 @@ git fetch https://github.com/AOSP-whatever/platform_system_sepolicy proton-rvc
 git cherry-pick b9263dd5aa32fc70a157fd7cf9ecbf743e653c8e
 popd
 
+enter_aosp_dir vendor/proton
+git fetch proton --unshallow
+git fetch https://github.com/AOSP-whatever/android_vendor_proton proton-rvc
+git cherry-pick 7d5dbb1a9e5eda8036db923d82d551a13c35395f^..fffd363c68d89797233dfdd345a49c5175e00422
+popd
+
 # because "set -e" is used above, when we get to this point, we know
 # all patches were applied successfully.
 echo "+++ all patches applied successfully! +++"

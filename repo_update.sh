@@ -59,13 +59,13 @@ git cherry-pick 1393a7ae9c381bd90f074659c4d6d955a73daec8^..6e146cd115dc6341de4f4
 git cherry-pick 4735ef881b9679259257682e8a772c93f33a0ca5
 popd
 
-#enter_aosp_dir build/soong
-#git fetch proton --unshallow
-#git fetch https://github.com/AOSP-whatever/platform_build_soong proton-rvc
-#git cherry-pick 16499c7ecda61ee4636e0474eaf6ef98c386091c^..a15ea49be810bf5052041ef0dd212452285f7afd
-#git cherry-pick 6d0d0ebe7019539f9519037995f34b740dd89d0a
-#git cherry-pick 816f983f362c1bfa4be9445bdf299581b00df9ee^..8f1a424600307406414539c1301b7de967066fbe
-#popd
+enter_aosp_dir build/soong
+git fetch proton --unshallow
+git fetch https://github.com/AOSP-whatever/platform_build_soong proton-rvc
+git cherry-pick 16499c7ecda61ee4636e0474eaf6ef98c386091c^..a15ea49be810bf5052041ef0dd212452285f7afd
+git cherry-pick 6d0d0ebe7019539f9519037995f34b740dd89d0a
+git cherry-pick 816f983f362c1bfa4be9445bdf299581b00df9ee^..8f1a424600307406414539c1301b7de967066fbe
+popd
 
 enter_aosp_dir frameworks/av
 git fetch proton --unshallow

@@ -49,6 +49,16 @@ git fetch https://github.com/AOSP-whatever/platform_bionic proton-rvc
 git cherry-pick d373a3e7221fa4f13fa77fefc19dc6146e691a68^..056bd1dc7bc7e608087b3cb8902cdc839e959dfe
 popd
 
+enter_aosp_dir build/make
+git fetch proton --unshallow
+git fetch https://github.com/AOSP-whatever/platform_build_make proton-rvc
+git cherry-pick 5064ed0a5d9157ffe37b9832a708d6bd60f3c3aa^..f9f40970c1608fef66895c363c6e08e6afc39ec3
+git cherry-pick f9e78ba3d21c5c1b217de1ac13e5ab832d131bcf^..7c664dccc7d5e508ba6848d8827892eb7e18e6cc
+git cherry-pick c38d30ba71ab0583036d9f46b4bff6db7a554d85
+git cherry-pick 1393a7ae9c381bd90f074659c4d6d955a73daec8^..6e146cd115dc6341de4f4e6946b704edfdca43b3
+git cherry-pick 4735ef881b9679259257682e8a772c93f33a0ca5
+popd
+
 # because "set -e" is used above, when we get to this point, we know
 # all patches were applied successfully.
 echo "+++ all patches applied successfully! +++"

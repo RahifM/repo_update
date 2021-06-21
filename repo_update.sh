@@ -47,9 +47,7 @@ popd
 enter_aosp_dir device/qcom/common
 git fetch aospa --unshallow
 git fetch https://github.com/AOSP-whatever/android_device_qcom_common staging/pa-ruby
-git cherry-pick 1b39c98ec4ca48535023469439f5d4086f3475e4
-git cherry-pick f10b42af160168e96927b2c88271a0c824f72942
-git cherry-pick 9bff660c5738aac13a398c2da3c08256526bbfa7^..ecee021d23937c59259d8345c349a10725f875f3
+git cherry-pick 7c4c1e7b79068cb891065c7005b48102ffb6c8ba^..fdad8aea5c29744b88390677d1e072441c4dda06
 popd
 
 enter_aosp_dir frameworks/av

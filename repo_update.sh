@@ -89,6 +89,12 @@ git cherry-pick 953fd11d67c678816766d3594682b2c5229bdac6^..3e878a600b134a464913a
 git cherry-pick c4b276223df1896f263ec22753dc56bb97d2ed27
 popd
 
+enter_aosp_dir vendor/google/pixel
+git fetch blobs --unshallow
+git fetch https://github.com/RahifM/android_vendor_google_pixel ruby
+git cherry-pick 92dc42296c5675edd1167b13155ba8444f4fe575
+popd
+
 # because "set -e" is used above, when we get to this point, we know
 # all patches were applied successfully.
 echo "+++ all patches applied successfully! +++"

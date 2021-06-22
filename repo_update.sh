@@ -55,6 +55,12 @@ git fetch https://github.com/AOSP-whatever/platform_build_soong hos-rika
 git cherry-pick 8cb34d9b498a6d1143cec4a6b87c53dad5564f2f^..e59366c5e641fd630acded007e98c9be34d6160b
 popd
 
+enter_aosp_dir external/tinycompress
+git fetch aosp --unshallow
+git fetch https://github.com/AOSP-whatever/platform_external_tinycompress android-11.0.0
+git cherry-pick 0b4ee126c6b28e613d79761d16a87f2536fd51f6
+popd
+
 enter_aosp_dir frameworks/av
 git fetch aosp --unshallow
 git fetch https://github.com/AOSP-whatever/platform_frameworks_av hos-rika

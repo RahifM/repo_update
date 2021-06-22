@@ -37,12 +37,12 @@ enter_aosp_dir() {
  #   repo sync -j8 --current-branch --no-tags
 #fi
 
-enter_aosp_dir build/make
-git fetch aospa --unshallow
-git fetch https://github.com/AOSP-whatever/platform_build_make staging/pa-ruby
-git cherry-pick a241c651e32e1e900d40879214b2f9a5692c9ea5
-git cherry-pick d5381f2628ea2a038b72d3a7fdb38b16934e7ce1^..7b527b3ba90a80a07b1a0ea94b0e3926d9d31d3d
-popd
+#enter_aosp_dir build/make
+#git fetch aospa --unshallow
+#git fetch https://github.com/AOSP-whatever/platform_build_make staging/pa-ruby
+#git cherry-pick a241c651e32e1e900d40879214b2f9a5692c9ea5
+#git cherry-pick d5381f2628ea2a038b72d3a7fdb38b16934e7ce1^..7b527b3ba90a80a07b1a0ea94b0e3926d9d31d3d
+#popd
 
 enter_aosp_dir device/qcom/common
 git fetch aospa --unshallow

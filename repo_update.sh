@@ -40,6 +40,7 @@ enter_aosp_dir() {
 enter_aosp_dir bootable/recovery
 git fetch github/hentaiOS --unshallow
 git fetch https://github.com/AOSP-whatever/platform_bootable_recovery hos-rika --depth=1
+git reset --hard
 git cherry-pick 573571cb77d4d69ae720169acd22c1aca336b5ea
 popd
 

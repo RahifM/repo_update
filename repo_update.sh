@@ -45,9 +45,9 @@ time git cherry-pick 573571cb77d4d69ae720169acd22c1aca336b5ea
 popd
 
 enter_aosp_dir build/make
-git fetch github/hentaiOS --unshallow
-git fetch https://github.com/AOSP-whatever/platform_build_make hos-rika --depth=7
-git cherry-pick c75249e6536ceff3c487e127ab333b1cc073ba02^..f5f039735cba75ac1d6e7e58a1db77cf33961bfd
+time git fetch github/hentaiOS --unshallow
+time git fetch https://github.com/AOSP-whatever/platform_build_make hos-rika --depth=8
+time git cherry-pick c75249e6536ceff3c487e127ab333b1cc073ba02^..f5f039735cba75ac1d6e7e58a1db77cf33961bfd
 popd
 
 enter_aosp_dir build/soong

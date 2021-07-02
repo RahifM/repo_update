@@ -58,8 +58,8 @@ git cherry-pick 0b4ee126c6b28e613d79761d16a87f2536fd51f6
 popd
 
 enter_aosp_dir frameworks/av
-git fetch https://github.com/AOSP-whatever/platform_frameworks_av android-11.0.0 -j16
-git cherry-pick 27044422f2334280f8d74f857db703c27bbb46ab^..55dd0d98f2b6473d6fd7292b1c056b4e1e3c02f4
+git fetch https://github.com/AOSP-whatever/platform_frameworks_av hos-rika --depth=8 -j64
+git cherry-pick 417665d9af6694b50cd832d4c9e092e1a9be972d^..b640db0ee10379172d7f28c379109dc018018612
 popd
 
 enter_aosp_dir frameworks/base

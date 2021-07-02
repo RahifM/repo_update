@@ -58,7 +58,7 @@ git cherry-pick 0b4ee126c6b28e613d79761d16a87f2536fd51f6
 popd
 
 enter_aosp_dir frameworks/av
-git fetch https://github.com/AOSP-whatever/platform_frameworks_av hos-rika --depth=8 -j64
+git fetch https://github.com/AOSP-whatever/platform_frameworks_av hos-rika --depth=8 -j16
 git cherry-pick 417665d9af6694b50cd832d4c9e092e1a9be972d^..b640db0ee10379172d7f28c379109dc018018612
 popd
 

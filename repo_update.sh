@@ -37,59 +37,29 @@ enter_aosp_dir() {
  #   repo sync -j8 --current-branch --no-tags
 #fi
 
-enter_aosp_dir bootable/recovery
-git fetch https://github.com/AOSP-whatever/platform_bootable_recovery hos-rika --depth=2 -j16
-git cherry-pick 573571cb77d4d69ae720169acd22c1aca336b5ea
-popd
-
 enter_aosp_dir build/make
-git fetch https://github.com/AOSP-whatever/platform_build_make hos-rika --depth=8 -j16
-git cherry-pick c75249e6536ceff3c487e127ab333b1cc073ba02^..f5f039735cba75ac1d6e7e58a1db77cf33961bfd
-popd
-
-enter_aosp_dir build/soong
-git fetch https://github.com/AOSP-whatever/platform_build_soong hos-rika --depth=3 -j16
-git cherry-pick 8cb34d9b498a6d1143cec4a6b87c53dad5564f2f^..e59366c5e641fd630acded007e98c9be34d6160b
-popd
-
-enter_aosp_dir external/tinycompress
-git fetch https://github.com/AOSP-whatever/platform_external_tinycompress android-11.0.0 --depth=2 -j16
-git cherry-pick 0b4ee126c6b28e613d79761d16a87f2536fd51f6
-popd
-
-enter_aosp_dir frameworks/av
-git fetch https://github.com/AOSP-whatever/platform_frameworks_av hos-rika --depth=8 -j16
-git cherry-pick 417665d9af6694b50cd832d4c9e092e1a9be972d^..b640db0ee10379172d7f28c379109dc018018612
+git fetch https://github.com/AOSP-whatever/platform_build_make posp-dumaloo-release --depth=3 -j16
+git cherry-pick b2100be00f5164a721b01a1666d2338d478e7ef7^..d9a9e5a83ac23ac922944ca11b9b6523503e5f0c
 popd
 
 enter_aosp_dir frameworks/base
-git fetch https://github.com/AOSP-whatever/platform_frameworks_base hos-rika --depth=14 -j16
-git cherry-pick 883f512d0513300b708e3a83b5f18c7a42be8adc^..33213dc3d9336ec82e0a429bacf752c3d8a2ead1
-popd
-
-enter_aosp_dir hardware/interfaces
-git fetch https://github.com/AOSP-whatever/platform_hardware_interfaces android-11.0.0 --depth=3 -j16
-git cherry-pick b49270a8347134826a50baddc699b0b02849782e
+git fetch https://github.com/AOSP-whatever/platform_frameworks_base posp-dumaloo-release --depth=5 -j16
+git cherry-pick 54c5b3a4d6b0c5063720e776240c1fab8a0f3f6e^..17750b29b3b851ab3319b543a88538e42f56470d
 popd
 
 enter_aosp_dir packages/apps/Settings
-git fetch https://github.com/AOSP-whatever/platform_packages_apps_Settings hos-rika --depth=4 -j16
-git cherry-pick 23f88177870437f4db3843439a85bbcc379c425a^..0dd0ccaeddd22895790b8ad4338c80d9eb868504
-popd
-
-enter_aosp_dir system/core
-git fetch https://github.com/AOSP-whatever/platform_system_core hos-rika --depth=3 -j16
-git cherry-pick bd07a5f62afa3cd5ffb602b5ea84fea742850a7a^..64a170504e7fc74fad747e9b3b054401754c3c3b
+git fetch https://github.com/AOSP-whatever/platform_packages_apps_Settings posp-dumaloo-release --depth=2 -j16
+git cherry-pick 58265165410b9273ad7fd916812e912fe66eab13
 popd
 
 enter_aosp_dir system/sepolicy
-git fetch https://github.com/AOSP-whatever/platform_system_sepolicy hos-rika --depth=2 -j16
-git cherry-pick 8030ed8403806a3ed36c12e52d340fea71c5c3ab
+git fetch https://github.com/AOSP-whatever/platform_system_sepolicy posp-dumaloo-release --depth=2 -j16
+git cherry-pick 97d57a0a8e5d508488d1a41bf2ece8208de7ceaa
 popd
 
-enter_aosp_dir vendor/hentai
-git fetch https://github.com/AOSP-whatever/platform_vendor_hentai hos-rika --depth=3 -j16
-git cherry-pick 95a70620ae5c6e678f6a395934f786fd65b2a274^..0441444751216e12946b21c0a33a9e4b5a893b55
+enter_aosp_dir vendor/potato
+git fetch https://github.com/AOSP-whatever/platform_vendor_potato posp-dumaloo-release --depth=2 -j16
+git cherry-pick 53c2743319e16e17109c8c37636b15ff21844054
 popd
 
 # because "set -e" is used above, when we get to this point, we know

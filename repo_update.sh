@@ -38,84 +38,63 @@ enter_aosp_dir() {
 #fi
 
 enter_aosp_dir art
-git fetch proton --unshallow
-git fetch https://github.com/AOSP-whatever/platform_art proton-rvc
-git cherry-pick 40ec137a9a26959642f1b50770872aedf3e41517
+git fetch https://github.com/AOSP-whatever/platform_art proton-rvc --depth=2 -j16
+git cherry-pick 53ace4c570a2bc71f0f6d6a8e07c6ecf9126174b
 popd
 
 enter_aosp_dir bionic
-git fetch proton --unshallow
-git fetch https://github.com/AOSP-whatever/platform_bionic proton-rvc
-git cherry-pick d373a3e7221fa4f13fa77fefc19dc6146e691a68^..056bd1dc7bc7e608087b3cb8902cdc839e959dfe
+git fetch https://github.com/AOSP-whatever/platform_bionic proton-rvc --depth=3 -j16
+git cherry-pick 9897152fd25698acef8808dda7d58e66e535039f^..b1b82e56259a254cf0bbbd4321fc75590b881f77
 popd
 
 enter_aosp_dir build/make
-git fetch proton --unshallow
-git fetch https://github.com/AOSP-whatever/platform_build_make proton-rvc
-git cherry-pick 5064ed0a5d9157ffe37b9832a708d6bd60f3c3aa^..f9f40970c1608fef66895c363c6e08e6afc39ec3
-git cherry-pick f9e78ba3d21c5c1b217de1ac13e5ab832d131bcf^..7c664dccc7d5e508ba6848d8827892eb7e18e6cc
-git cherry-pick c38d30ba71ab0583036d9f46b4bff6db7a554d85
-git cherry-pick 1393a7ae9c381bd90f074659c4d6d955a73daec8^..6e146cd115dc6341de4f4e6946b704edfdca43b3
-git cherry-pick 4735ef881b9679259257682e8a772c93f33a0ca5
+git fetch https://github.com/AOSP-whatever/platform_build_make proton-rvc --depth=2 -j18
+git cherry-pick 1c5675e2575729177e10a65a134aef2474878b08^..af9658a2652edac5cca568711367dbd05719cadc
 popd
 
 enter_aosp_dir build/soong
-git fetch proton --unshallow
-git fetch https://github.com/AOSP-whatever/platform_build_soong proton-rvc
-git cherry-pick 16499c7ecda61ee4636e0474eaf6ef98c386091c^..a15ea49be810bf5052041ef0dd212452285f7afd
-git cherry-pick 6d0d0ebe7019539f9519037995f34b740dd89d0a
-git cherry-pick 816f983f362c1bfa4be9445bdf299581b00df9ee^..8f1a424600307406414539c1301b7de967066fbe
+git fetch https://github.com/AOSP-whatever/platform_build_soong proton-rvc --depth=7 -j16
+git cherry-pick 41d2510c8283ab3222d56a21e3a69ba664e69e8c^..46c9227396782044a2d1386ff4e686cc77c53c8c
 popd
 
 enter_aosp_dir frameworks/av
-git fetch proton --unshallow
-git fetch https://github.com/AOSP-whatever/platform_frameworks_av staging/proton-rvc
-git cherry-pick 27044422f2334280f8d74f857db703c27bbb46ab^..55dd0d98f2b6473d6fd7292b1c056b4e1e3c02f4
-git cherry-pick ba0f04712be065a1dd9f94f4dd0e4fdbfe0d1824
+git fetch https://github.com/AOSP-whatever/platform_frameworks_av proton-rvc --depth=14 -j16
+git cherry-pick 9471be5dae5be537640e60b6ce8b36415e491a8d^..444c4b427c1a0eca6215ed2114d0b36583eb3807
 popd
 
 enter_aosp_dir frameworks/base
-git fetch proton --unshallow
-git fetch https://github.com/AOSP-whatever/platform_frameworks_base rebase/proton-rvc
-git cherry-pick e2f5971ce014872d5589f6c7a33a3a8aee8a94cd^..d3fab8a762f85c0f0e152526842c4e2ec5164c15
+git fetch https://github.com/AOSP-whatever/platform_frameworks_base proton-rvc --depth=14 -j16
+git cherry-pick 3fefbf1d856af2b44de02ffd559e9737755c1946^..052c1117cffa1bad2a223ebf2ab735326d571452
 popd
 
 enter_aosp_dir frameworks/native
-git fetch proton --unshallow
-git fetch https://github.com/AOSP-whatever/platform_frameworks_native proton-rvc
-git cherry-pick d6903b3fbb4837ce4fa42f174dea71ce50b24b5a
-git cherry-pick 70c45b4d64e55898bfc55d245752b7c418f9eac8
+git fetch https://github.com/AOSP-whatever/platform_frameworks_native proton-rvc --depth=3 -j16
+git cherry-pick a16873a4aeadb59ec88d125a11678ed5f34b5997^..21c70a52218add9b9392eff0195ba673bbb66557
 popd
 
 enter_aosp_dir packages/apps/Launcher3
-git fetch proton --unshallow
-git fetch https://github.com/AOSP-whatever/platform_packages_apps_Launcher3 proton-rvc
-git cherry-pick 43dfaa1f2f75e53a9cbaa5bd16c6619c2d433964
+git fetch https://github.com/AOSP-whatever/platform_packages_apps_Launcher3 proton-rvc --depth=2 -j16
+git cherry-pick a399d3054c96692741568f0cd4d2138fca849993
 popd
 
 enter_aosp_dir packages/apps/Settings
-git fetch proton --unshallow
-git fetch https://github.com/AOSP-whatever/platform_packages_apps_Settings proton-rvc
-git cherry-pick 3b284ebbc768780a983ac599c24f1e234a54bf44^..a309e660ac99219877774aa747911b7036331b3a
+git fetch https://github.com/AOSP-whatever/platform_packages_apps_Settings proton-rvc --depth=3 -j16
+git cherry-pick 79f276966cf19ab246a8f6ee2383706a4643e766^..de52f78b3205ce9055867d2a3de59126e9b252e2
 popd
 
 enter_aosp_dir system/core
-git fetch proton --unshallow
-git fetch https://github.com/AOSP-whatever/platform_system_core proton-rvc
-git cherry-pick 18d0deb1d9508d0eb76b3b7effec7b90d425cdd7
-git cherry-pick d1259c8bc8f5290a9e9b63c644eeaca72991b63b^..16646952c206ccef6f1b778a23d27d4ba3d58828
+git fetch https://github.com/AOSP-whatever/platform_system_core proton-rvc --depth=5 -j16
+git cherry-pick dab503d5d9361e945f204e037c181a540be54ae7^..91073d7a9142c22b36cd9f3d4bedb60d546f615f
 popd
 
 enter_aosp_dir system/sepolicy
-git fetch proton --unshallow
-git fetch https://github.com/AOSP-whatever/platform_system_sepolicy proton-rvc
-git cherry-pick b9263dd5aa32fc70a157fd7cf9ecbf743e653c8e
+git fetch https://github.com/AOSP-whatever/platform_system_sepolicy proton-rvc --depth=2 -j16
+git cherry-pick dbc351c8024120b6422933c70125056316d38503
 popd
 
 enter_aosp_dir vendor/proton
-git fetch proton --unshallow
-git fetch https://github.com/AOSP-whatever/android_vendor_proton proton-rvc
-git cherry-pick 7d5dbb1a9e5eda8036db923d82d551a13c35395f^..fffd363c68d89797233dfdd345a49c5175e00422
+git fetch https://github.com/AOSP-whatever/android_vendor_proton proton-rvc --depth=4 -j16
+git cherry-pick 0e93790881454c243d16110b5f2ec4f4a47debda^..12380db12ac72cb8bfaef06a252ff874c9467858
 popd
 
 # because "set -e" is used above, when we get to this point, we know

@@ -48,7 +48,7 @@ git cherry-pick 9897152fd25698acef8808dda7d58e66e535039f^..b1b82e56259a254cf0bbb
 popd
 
 enter_aosp_dir build/make
-git fetch https://github.com/AOSP-whatever/platform_build_make proton-rvc --depth=2 -j18
+git fetch https://github.com/AOSP-whatever/platform_build_make proton-rvc --depth=18 -j16
 git cherry-pick 1c5675e2575729177e10a65a134aef2474878b08^..af9658a2652edac5cca568711367dbd05719cadc
 popd
 

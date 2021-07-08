@@ -58,7 +58,7 @@ git cherry-pick 97d57a0a8e5d508488d1a41bf2ece8208de7ceaa
 popd
 
 enter_aosp_dir vendor/potato
-git fetch https://github.com/AOSP-whatever/platform_vendor_potato posp-dumaloo-release --depth=2 -j16
+git fetch https://github.com/AOSP-whatever/vendor_potato posp-dumaloo-release --depth=2 -j16
 git cherry-pick 53c2743319e16e17109c8c37636b15ff21844054
 popd
 

@@ -43,13 +43,13 @@ git cherry-pick 573571cb77d4d69ae720169acd22c1aca336b5ea
 popd
 
 enter_aosp_dir build/make
-git fetch https://github.com/AOSP-whatever/platform_build_make hos-rika --depth=8 -j16
-git cherry-pick c75249e6536ceff3c487e127ab333b1cc073ba02^..f5f039735cba75ac1d6e7e58a1db77cf33961bfd
+git fetch https://github.com/AOSP-whatever/platform_build_make hos-rika --depth=11 -j16
+git cherry-pick 8b1229f11d6b7258c4120d6251ac87ee68c8160d^..ca5933afb7f333a6acd949552c6734a04fdc7396
 popd
 
 enter_aosp_dir build/soong
-git fetch https://github.com/AOSP-whatever/platform_build_soong hos-rika --depth=3 -j16
-git cherry-pick 8cb34d9b498a6d1143cec4a6b87c53dad5564f2f^..e59366c5e641fd630acded007e98c9be34d6160b
+git fetch https://github.com/AOSP-whatever/platform_build_soong hos-rika --depth=4 -j16
+git cherry-pick e45665bc57b7042d8ee0621d32e242c58a106433^..c03482a2ab33061c7c28dd899d33b509f5d7596b
 popd
 
 enter_aosp_dir external/tinycompress
@@ -64,6 +64,11 @@ popd
 
 enter_aosp_dir frameworks/base
 git fetch https://github.com/AOSP-whatever/platform_frameworks_base hos-rika --depth=14 -j16
+git cherry-pick 44f68a979e542d22ad8ddc412fa2225f28f72c6d
+popd
+
+enter_aosp_dir frameworks/native
+git fetch https://github.com/AOSP-whatever/platform_frameworks_native hos-rika --depth=2 -j16
 git cherry-pick 883f512d0513300b708e3a83b5f18c7a42be8adc^..33213dc3d9336ec82e0a429bacf752c3d8a2ead1
 popd
 

@@ -64,12 +64,12 @@ popd
 
 enter_aosp_dir frameworks/base
 git fetch https://github.com/AOSP-whatever/platform_frameworks_base hos-rika --depth=14 -j16
-git cherry-pick 44f68a979e542d22ad8ddc412fa2225f28f72c6d
+git cherry-pick 883f512d0513300b708e3a83b5f18c7a42be8adc^..33213dc3d9336ec82e0a429bacf752c3d8a2ead1
 popd
 
 enter_aosp_dir frameworks/native
 git fetch https://github.com/AOSP-whatever/platform_frameworks_native hos-rika --depth=2 -j16
-git cherry-pick 883f512d0513300b708e3a83b5f18c7a42be8adc^..33213dc3d9336ec82e0a429bacf752c3d8a2ead1
+git cherry-pick 44f68a979e542d22ad8ddc412fa2225f28f72c6d
 popd
 
 enter_aosp_dir hardware/interfaces

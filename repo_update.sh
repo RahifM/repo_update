@@ -68,8 +68,8 @@ git cherry-pick 132e37b110838dcc8a6fa8298a07022b702670e9
 popd
 
 enter_aosp_dir vendor/pa
-git fetch https://github.com/AOSP-whatever/android_vendor_pa staging/pa-ruby --depth=11 -j16
-git cherry-pick e775309869a9a1ab91954a72350e76571a951a6c^..97b50d953ea2c533c3a8333d1a5fd9bb04756166
+git fetch https://github.com/AOSP-whatever/android_vendor_pa staging/pa-ruby --depth=12 -j16
+git cherry-pick dbd5312126743bfd83b7f6e8144fd5476cac1984^..b3c60b17d784bed22e24c001c44abb29fcc8b877
 popd
 
 enter_aosp_dir vendor/google/pixel

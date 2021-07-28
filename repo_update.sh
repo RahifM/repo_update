@@ -54,7 +54,7 @@ popd
 
 enter_aosp_dir frameworks/base
 git fetch https://github.com/AOSP-whatever/platform_frameworks_base staging/pa-ruby --depth=7 -j16
-git cherry-pick 67a5f9fc518981b662224e92d437595fb113d097^..de50bee76566bc4f9f5b1c09c720d509e024dced
+git cherry-pick 020f27a8c185cfe8f88dd70da6315166a751b065^..eca80cdd1d43f05cb7dad6a3f99da16966489e38
 popd
 
 enter_aosp_dir frameworks/native

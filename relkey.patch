@@ -1,0 +1,19 @@
+commit 8153aa3afe4ee1dbaa2c06e0484ba5f1f237e1bf
+Author: RahifM <rahifmanjatha372@gmail.com>
+Date:   Tue Sep 6 19:01:02 2022 +0000
+
+     [PATCH] Use 'release-keys' for build tag
+
+diff --git a/core/Makefile b/core/Makefile
+index f2a524d58c..c68edd35cc 100644
+--- a/core/Makefile
++++ b/core/Makefile
+@@ -167,7 +167,7 @@ endif
+ # Both of these tags will be removed and replaced with "release-keys"
+ # when the target-files is signed in a post-build step.
+ ifeq ($(DEFAULT_SYSTEM_DEV_CERTIFICATE),build/target/product/security/testkey)
+-BUILD_KEYS := test-keys
++BUILD_KEYS := release-keys
+ else
+ BUILD_KEYS := dev-keys
+ endif

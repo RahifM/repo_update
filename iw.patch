@@ -1,0 +1,38 @@
+commit 7a24ff01199545682316b16eec3b1db1e95bfca9
+Author: Dan Willemsen <dwillemsen@google.com>
+Date:   Mon Nov 28 16:25:23 2016 -0800
+
+    Android.mk: Stop using version.sh script
+    
+    This isn't producing the correct results anyways, since the working
+    directory of the script is the top level of the android tree, not
+    external/iw like the script expects. And moving the working directory
+    doesn't help either, since we don't have a copy the git tags that it
+    expects.
+    
+    I noticed this while testing git submodules as an alternative to repo,
+    where we suddenly have a .git directory at the top level, and the script
+    failed.
+    
+    So just extract the version number itself from the script and write out
+    our own version.c file.
+    
+    Test: m out/target/product/generic/gen/EXECUTABLES/iw_intermediates/version.c
+    Test: Compare version.c before/after
+    Change-Id: I98ff4e44b84afbcd2ce8319ccf6816d5fa57a90a
+
+diff --git a/Android.mk b/Android.mk
+index 20b0432..d9f6b36 100644
+--- a/Android.mk
++++ b/Android.mk
+@@ -26,7 +26,9 @@ LOCAL_MODULE := iw
+ LOCAL_MODULE_CLASS := EXECUTABLES
+ LOCAL_GENERATED_SOURCES := $(local-generated-sources-dir)/version.c
+ $(LOCAL_GENERATED_SOURCES) : $(LOCAL_PATH)/version.sh
++	@echo "Generated: $@"
+ 	@mkdir -p $(dir $@)
+-	$(hide) $< $@
++	$(hide) echo '#include "iw.h"' >$@
++	$(hide) echo "const char iw_version[] = $$(grep ^VERSION $< | sed "s/VERSION=//");" >>$@
+ 
+ include $(BUILD_EXECUTABLE)

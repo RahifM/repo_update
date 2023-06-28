@@ -1,0 +1,21 @@
+From 4a9bd23ab7dadbb4b6058f9a2a8aece5912bbae4 Mon Sep 17 00:00:00 2001
+From: RahifM <rahifmanjatha372@gmail.com>
+Date: Wed, 28 Jun 2023 16:24:12 +0530
+Subject: [PATCH] Add ccache_dir to build script [skip ci]
+
+---
+ build_kernel.sh | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/build_kernel.sh b/build_kernel.sh
+index 3764aedcfa29..a6b7939a82ba 100755
+--- a/build_kernel.sh
++++ b/build_kernel.sh
+@@ -4,6 +4,7 @@
+ export TZ='Asia/Kolkata' && date
+ export KERNELDIR=`readlink -f .`
+ echo "kerneldir = $KERNELDIR"
++export CCACHE_DIR=$PWD/../berycc
+ 
+ TG=$HOME/telegram.sh/telegram
+ LOG=$KERNELDIR/bl*.txt

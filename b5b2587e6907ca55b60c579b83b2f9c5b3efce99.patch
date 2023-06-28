@@ -1,0 +1,22 @@
+From b5b2587e6907ca55b60c579b83b2f9c5b3efce99 Mon Sep 17 00:00:00 2001
+From: RahifM <rahifmanjatha372@gmail.com>
+Date: Wed, 28 Jun 2023 01:52:33 +0530
+Subject: [PATCH] Makefile: Use ccache
+
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 588cde93d5e3..f2d8ea3f0bcf 100755
+--- a/Makefile
++++ b/Makefile
+@@ -349,7 +349,7 @@ include scripts/Kbuild.include
+ # Make variables (CC, etc...)
+ AS		= $(CROSS_COMPILE)as
+ LD		= $(CROSS_COMPILE)ld
+-CC		= $(CROSS_COMPILE)gcc
++CC		= ccache $(CROSS_COMPILE)gcc
+ LDGOLD		= $(CROSS_COMPILE)ld.gold
+ CPP		= $(CC) -E
+ AR		= $(CROSS_COMPILE)ar
